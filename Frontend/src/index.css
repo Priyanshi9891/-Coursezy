@@ -1,0 +1,466 @@
+
+
+/* ================= GLOBAL ================= */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+/* ================= SIGNUP ================= */
+.signup-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    linear-gradient(135deg, rgba(102,126,234,0.7), rgba(118,75,162,0.7)),
+    url("logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.signup-form {
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.signup-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.signup-form input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #5a67d8;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:space-between;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position: sticky;
+top: 0;
+z-index: 1000;
+padding: 10px 30px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:15px;
+font-weight:900;
+font-size:25px;
+color: rgb(1, 1, 52);
+font-family: 'Times New Roman', Times, serif;
+}
+
+.logoimg{
+  height: 30px;
+  width: 30px;
+}
+
+.nav-buttons{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.btn{
+padding:8px 18px;
+border-radius:8px;
+border:none;
+cursor:pointer;
+font-weight:500;
+transition:0.3s;
+}
+
+.btn-login{
+background:#f0f2ff;
+color:#4a5cf0;
+}
+
+.btn-signup{
+background:#4a5cf0;
+color:#fff;
+}
+
+.btn-login:hover{background:#e0e4ff;}
+.btn-signup:hover{background:#3b4be0;}
+
+/* ================= HERO ================= */
+.hero{
+background:linear-gradient(90deg, #3b82f6, #6366f1);
+color:#fff;
+padding:80px 20px;
+text-align:center;
+}
+
+.hero h1{
+font-size:42px;
+font-weight:600;
+margin-bottom:10px;
+}
+
+.hero p{
+opacity:0.9;
+margin-bottom:30px;
+}
+
+.search-box{
+max-width:600px;
+margin:0 auto;
+display:flex;
+background:#fff;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.search-box input{
+flex:1;
+border:none;
+outline:none;
+padding:15px 20px;
+font-size:14px;
+}
+
+.search-box button{
+background:#3b82f6;
+color:#fff;
+border:none;
+padding:0 30px;
+cursor:pointer;
+font-weight:500;
+}
+
+.explore-btn{
+margin-top:25px;
+background:#fff;
+color:#3b82f6;
+padding:10px 25px;
+border-radius:25px;
+border:none;
+cursor:pointer;
+font-weight:500;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* ================= COURSES ================= */
+.courses{
+padding:60px 60px;
+text-align:center;
+}
+
+.courses h2{
+font-size:28px;
+margin-bottom:40px;
+}
+
+.course-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.course-card{
+background:hsl(180, 6%, 85%);
+border-radius:15px;
+padding:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.course-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.12);
+}
+
+.course-card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+.course-card h3{
+font-size:20px;
+margin-bottom:5px;
+}
+
+.course-card p{
+font-size:16px;
+opacity:0.7;
+}
+
+/* ================= DASHBOARD ================= */
+.app-layout {
+display: flex;
+min-height: 100vh;
+background: #f4f6fb;
+}
+
+.sidebar {
+width: 230px;
+background: #edecf7;
+color: #ffffff;
+padding: 20px;
+display: flex;
+flex-direction: column;
+}
+
+.sidebar nav a {
+color: #131212;
+text-decoration: none;
+margin: 12px 0;
+display: block;
+padding: 8px;
+border-radius: 6px;
+}
+
+.sidebar nav a:hover {
+background: #3b37ad;
+color: white;
+}
+
+.main-content {
+flex: 1;
+display: flex;
+flex-direction: column;
+}
+
+.navbar {
+background: #fff;
+padding: 15px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+color: rgb(17, 14, 25);
+font-family: 'Times New Roman', Times, serif;
+}
+
+.content {
+padding: 20px;
+}
+
+.stats {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+margin-bottom: 25px;
+}
+
+.stat-card {
+background: #fff;
+padding: 20px;
+border-radius: 10px;
+display: flex;
+justify-content: space-between;
+font-weight: bold;
+}
+
+.courses-section {
+background: #fff;
+padding: 25px;
+border-radius: 10px;
+}
+
+.courses-section h2{
+  text-align: center;
+  padding: 10px;
+}
+
+.course{
+padding: 10px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.progress-bar {
+width: 100%;
+height: 10px;
+background: #e5e7eb;
+border-radius: 10px;
+overflow: hidden;
+margin: 8px 0;
+}
+
+.progress {
+height: 100%;
+background: #4f46e5;
+border-radius: 10px;
+}
+
+/* ================= DARK MODE (ADDED) ================= */
+.mood{
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.dark {
+  background:#020617;
+  color:#f1f5f9;
+}
+
+body.dark .navbar{
+  background:#020617;
+  color:white;
+}
+
+body.dark .logo{
+  color:#e0e7ff;
+}
+
+body.dark .hero{
+  background:linear-gradient(90deg,#020617,#0f172a);
+}
+
+body.dark .search-box{
+  background:#020617;
+}
+
+body.dark .search-box input{
+  background:#020617;
+  color:white;
+}
+
+body.dark .courses{
+  background:#020617;
+}
+
+body.dark .course-card{
+  background:#0f172a;
+  color:white;
+}
+
+body.dark .signup-form{
+  background:#020617;
+  color:white;
+}
+
+body.dark .signup-form input{
+  background:#0f172a;
+  color:white;
+  border:1px solid #334155;
+}
+
+body.dark .app-layout{
+  background:#020617;
+}
+
+body.dark .sidebar{
+  background:#020617;
+}
+
+body.dark .sidebar nav a{
+  color:#e5e7eb;
+}
+
+body.dark .sidebar nav a:hover{
+  background:#4f46e5;
+}
+
+body.dark .stat-card{
+  background:#0f172a;
+  color:white;
+}
+
+body.dark .courses-section{
+  background:#0f172a;
+  color:white;
+}
+
+body.dark .progress-bar{
+  background:#1e293b;
+}
+
+body.dark .progress{
+  background:#6366f1;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+.navbar{padding:15px 25px;}
+.hero h1{font-size:30px;}
+.courses{padding:40px 25px;}
+}
+
+@media (max-width: 900px) {
+.stats {
+grid-template-columns: 1fr;
+}
+
+.sidebar {
+width: 180px;
+}
+}
+
+@media (max-width: 600px) {
+.app-layout {
+flex-direction: column;
+}
+
+.sidebar {
+width: 100%;
+flex-direction: row;
+justify-content: space-around;
+}
+
+.sidebar nav {
+display: flex;
+gap: 10px;
+}
+}
